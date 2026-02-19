@@ -1,0 +1,27 @@
+[package]
+name = "wallascii"
+version = "0.1.0"
+edition = "2021"
+authors = ["xjrf"]
+description = "ASCII wallpaper generator with 120+ fonts and 35+ color themes"
+license = "MIT"
+repository = "https://github.com/xjrf/wallascii"
+keywords = ["ascii", "wallpaper", "figlet", "tui"]
+categories = ["command-line-utilities", "multimedia::images"]
+
+[[bin]]
+name = "wallascii"
+path = "src/main.rs"
+
+[[bin]]
+name = "wallascii-cli"
+path = "src/main_cli.rs"
+
+[dependencies]
+ab_glyph = "0.2.32"
+clap = { version = "4.5", features = ["derive"] }
+crossterm = "0.29.0"
+image = "0.25.9"
+imageproc = "0.26.0"
+ratatui = "0.30.0"
+retrofont = "0.2.2"
